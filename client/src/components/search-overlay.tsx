@@ -50,7 +50,7 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold font-sans text-charcoal">
+                <h2 className="text-2xl font-bold font-sans text-charcoal-gray">
                   Search Posts
                 </h2>
                 <Button
@@ -71,7 +71,7 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                   placeholder="What are you looking for?"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full p-4 pr-12 border border-gray-200 rounded-xl focus:ring-2 focus:ring-deep-purple focus:border-transparent text-lg"
+                  className="w-full p-4 pr-12 border border-gray-200 rounded-xl focus:ring-2 focus:ring-dusty-pink focus:border-transparent text-lg"
                   data-testid="input-search"
                 />
                 <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -82,7 +82,7 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                 <div className="mb-6">
                   {isLoading ? (
                     <div className="text-center py-8">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-deep-purple mx-auto"></div>
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-dusty-pink mx-auto"></div>
                       <p className="text-gray-500 mt-2">Searching...</p>
                     </div>
                   ) : searchResults && searchResults.length > 0 ? (
@@ -95,12 +95,12 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                           <motion.div
                             whileHover={{ x: 5 }}
                             onClick={onClose}
-                            className="p-4 border border-gray-100 rounded-lg hover:border-deep-purple transition-all duration-300 cursor-pointer"
+                            className="p-4 border border-gray-100 rounded-lg hover:border-dusty-pink transition-all duration-300 cursor-pointer"
                             data-testid={`search-result-${post.id}`}
                           >
                             <div className="flex items-start justify-between">
                               <div>
-                                <h3 className="font-semibold text-charcoal mb-1">
+                                <h3 className="font-semibold text-charcoal-gray mb-1">
                                   {post.title}
                                 </h3>
                                 <p className="text-sm text-gray-600 mb-2">
@@ -136,7 +136,7 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setSearchQuery(search.term)}
-                        className="px-3 py-1 bg-soft-lavender text-deep-purple rounded-full text-sm hover:bg-deep-purple hover:text-white transition-all duration-300"
+                        className="px-3 py-1 bg-light-lavender text-dusty-pink rounded-full text-sm hover:bg-dusty-pink hover:text-white transition-all duration-300"
                         data-testid={`popular-search-${search.term.toLowerCase().replace(' ', '-')}`}
                       >
                         {search.term}

@@ -29,7 +29,7 @@ export default function BlogPostsGrid() {
       return response.json();
     },
     onSuccess: (data, postId) => {
-      setLikedPosts(prev => new Set([...prev, postId]));
+      setLikedPosts(prev => new Set([...Array.from(prev), postId]));
       queryClient.invalidateQueries({ queryKey: ["/api/posts"] });
       toast({
         title: "Post liked!",
@@ -49,7 +49,7 @@ export default function BlogPostsGrid() {
 
   if (isLoading) {
     return (
-      <section className="py-20 bg-soft-gray">
+      <section className="py-20 bg-very-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Array.from({ length: 6 }).map((_, i) => (
@@ -66,18 +66,18 @@ export default function BlogPostsGrid() {
   }
 
   return (
-    <section className="py-20 bg-soft-gray" data-testid="blog-posts-grid">
+    <section className="py-20 bg-very-light-gray" data-testid="blog-posts-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
-            <h2 className="text-4xl font-bold font-sans text-charcoal mb-4">
+            <h2 className="text-4xl font-bold font-sans text-charcoal-gray mb-4">
               Latest Articles
             </h2>
             <p className="text-xl text-gray-600">Fresh content from our community</p>
           </div>
           <div className="hidden md:flex items-center space-x-4 mt-4 md:mt-0">
-            <Button className="px-6 py-3 bg-deep-purple text-white rounded-xl font-semibold hover:bg-opacity-90">
+            <Button className="px-6 py-3 bg-electric-blue text-white rounded-xl font-semibold hover:bg-opacity-90">
               All Categories
             </Button>
           </div>
@@ -93,8 +93,8 @@ export default function BlogPostsGrid() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? "bg-deep-purple text-white"
-                  : "bg-white text-charcoal hover:bg-deep-purple hover:text-white"
+                  ? "bg-dusty-pink text-white"
+                  : "bg-white text-charcoal-gray hover:bg-dusty-pink hover:text-white"
               }`}
               data-testid={`category-filter-${category.toLowerCase()}`}
             >
@@ -142,7 +142,7 @@ export default function BlogPostsGrid() {
                               {post.readTime} min read • {new Date(post.createdAt!).toLocaleDateString()}
                             </span>
                           </div>
-                          <h3 className="text-xl font-bold font-sans text-charcoal mb-3 group-hover:text-deep-purple transition-colors duration-300">
+                          <h3 className="text-xl font-bold font-sans text-charcoal-gray mb-3 group-hover:text-dusty-pink transition-colors duration-300">
                             {post.title}
                           </h3>
                           <p className="text-gray-600 leading-relaxed mb-4">
@@ -155,7 +155,7 @@ export default function BlogPostsGrid() {
                                 alt={post.authorName}
                                 className="w-8 h-8 rounded-full mr-3"
                               />
-                              <span className="text-sm font-medium text-charcoal">
+                              <span className="text-sm font-medium text-charcoal-gray">
                                 {post.authorName}
                               </span>
                             </div>
@@ -189,7 +189,7 @@ export default function BlogPostsGrid() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-4 border-2 border-deep-purple text-deep-purple rounded-xl font-semibold hover:bg-deep-purple hover:text-white transition-all duration-300 inline-flex items-center"
+                className="px-8 py-4 border-2 border-dusty-pink text-dusty-pink rounded-xl font-semibold hover:bg-dusty-pink hover:text-white transition-all duration-300 inline-flex items-center"
                 data-testid="button-load-more"
               >
                 <span>Load More Articles</span>

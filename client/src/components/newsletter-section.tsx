@@ -42,7 +42,7 @@ export default function NewsletterSection() {
 
   return (
     <section 
-      className="py-20 bg-gradient-to-br from-deep-purple to-vibrant-coral"
+      className="py-20 bg-gradient-to-br from-dusty-pink to-vibrant-coral"
       data-testid="newsletter-section"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -79,7 +79,7 @@ export default function NewsletterSection() {
               <Button
                 type="submit"
                 disabled={subscribeMutation.isPending}
-                className="w-full px-8 py-4 bg-white text-deep-purple rounded-xl font-bold hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100"
+                className="w-full px-8 py-4 bg-white text-dusty-pink rounded-xl font-bold hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100"
                 data-testid="button-subscribe"
               >
                 {subscribeMutation.isPending ? "Subscribing..." : "Subscribe Now"}

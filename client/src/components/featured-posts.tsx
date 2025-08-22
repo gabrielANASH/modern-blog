@@ -63,7 +63,7 @@ export default function FeaturedPosts() {
           variants={slideUpVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold font-sans text-charcoal mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold font-sans text-charcoal-gray mb-4">
             Featured Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -109,7 +109,7 @@ export default function FeaturedPosts() {
                           {mainPost.readTime} min read • {new Date(mainPost.createdAt!).toLocaleDateString()}
                         </span>
                       </div>
-                      <h3 className="text-2xl lg:text-3xl font-bold font-sans text-charcoal mb-4 group-hover:text-deep-purple transition-colors duration-300">
+                      <h3 className="text-2xl lg:text-3xl font-bold font-sans text-charcoal-gray mb-4 group-hover:text-dusty-pink transition-colors duration-300">
                         {mainPost.title}
                       </h3>
                       <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -122,7 +122,7 @@ export default function FeaturedPosts() {
                           className="w-12 h-12 rounded-full mr-4"
                         />
                         <div>
-                          <p className="font-semibold text-charcoal">{mainPost.authorName}</p>
+                          <p className="font-semibold text-charcoal-gray">{mainPost.authorName}</p>
                           <p className="text-gray-500 text-sm">{mainPost.authorBio}</p>
                         </div>
                       </div>
@@ -156,7 +156,7 @@ export default function FeaturedPosts() {
                       />
                       <CardContent className="p-6">
                         <div className="flex items-center gap-2 mb-3">
-                          <Badge className="bg-deep-purple text-white text-sm">
+                          <Badge className="bg-electric-blue text-white text-sm">
                             {post.category}
                           </Badge>
                           <span className="text-gray-500 text-sm flex items-center gap-1">
@@ -164,7 +164,7 @@ export default function FeaturedPosts() {
                             {post.readTime} min read
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold font-sans text-charcoal mb-3 group-hover:text-deep-purple transition-colors duration-300">
+                        <h3 className="text-xl font-bold font-sans text-charcoal-gray mb-3 group-hover:text-dusty-pink transition-colors duration-300">
                           {post.title}
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">

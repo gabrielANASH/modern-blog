@@ -48,7 +48,7 @@ export default function PostPage() {
         <Navigation />
         <main className="pt-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <h1 className="text-3xl font-bold text-charcoal mb-4">Post Not Found</h1>
+            <h1 className="text-3xl font-bold text-charcoal-gray mb-4">Post Not Found</h1>
             <p className="text-gray-600 mb-8">The post you're looking for doesn't exist.</p>
             <Link href="/">
               <Button>
@@ -100,7 +100,7 @@ export default function PostPage() {
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold font-sans text-charcoal mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold font-sans text-charcoal-gray mb-6 leading-tight">
               {post.title}
             </h1>
             
@@ -112,7 +112,7 @@ export default function PostPage() {
                   className="w-16 h-16 rounded-full mr-4"
                 />
                 <div>
-                  <p className="font-semibold text-charcoal text-lg">{post.authorName}</p>
+                  <p className="font-semibold text-charcoal-gray text-lg">{post.authorName}</p>
                   <p className="text-gray-600">{post.authorBio}</p>
                 </div>
               </div>
@@ -175,11 +175,11 @@ export default function PostPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-12 p-8 bg-soft-lavender rounded-2xl"
+            className="mt-12 p-8 bg-light-lavender rounded-2xl"
           >
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-bold text-charcoal mb-2">
+                <h3 className="text-xl font-bold text-charcoal-gray mb-2">
                   Enjoyed this article?
                 </h3>
                 <p className="text-gray-600">
@@ -189,14 +189,14 @@ export default function PostPage() {
               <div className="flex items-center space-x-4">
                 <Button
                   variant="outline"
-                  className="border-deep-purple text-deep-purple hover:bg-deep-purple hover:text-white"
+                  className="border-dusty-pink text-dusty-pink hover:bg-dusty-pink hover:text-white"
                   data-testid="button-like-post"
                 >
                   <Heart className="w-4 h-4 mr-2" />
                   Like ({post.likes})
                 </Button>
                 <Button 
-                  className="bg-deep-purple text-white hover:bg-opacity-90"
+                  className="bg-electric-blue text-white hover:bg-opacity-90"
                   data-testid="button-share-post"
                 >
                   <Share2 className="w-4 h-4 mr-2" />
@@ -222,7 +222,7 @@ export default function PostPage() {
                     className="w-20 h-20 rounded-full mr-6"
                   />
                   <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">
+                    <h3 className="text-2xl font-bold text-charcoal-gray mb-2">
                       {post.authorName}
                     </h3>
                     <p className="text-gray-600 mb-4">

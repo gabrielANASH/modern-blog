@@ -29,7 +29,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-charcoal text-white py-16" data-testid="footer">
+    <footer className="bg-charcoal-gray text-white py-16" data-testid="footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
@@ -50,7 +50,7 @@ export default function Footer() {
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  whileHover={{ scale: 1.1, backgroundColor: "#6366F1" }}
+                  whileHover={{ scale: 1.1, backgroundColor: "#D8A7B1" }}
                   className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center transition-all duration-300"
                   data-testid={`social-${social.label.toLowerCase()}`}
                 >

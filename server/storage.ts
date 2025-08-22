@@ -172,6 +172,8 @@ export class MemStorage implements IStorage {
       id,
       likes: 0,
       createdAt: new Date(),
+      authorBio: insertPost.authorBio || null,
+      featured: insertPost.featured || null,
     };
     this.posts.set(id, post);
     return post;
