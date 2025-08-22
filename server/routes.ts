@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
+import { insertPostSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Get all posts with optional category filter
@@ -61,6 +62,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ likes: post?.likes || 0 });
     } catch (error) {
       res.status(500).json({ error: "Failed to like post" });
+    }
+  });
+
+  // Create a new post
+  app.post("/api/posts", async (req, res) => {
+    try {
+      const postData = insertPostSchema.parse(req.body);
+      const post = await storage.createPost(postData);
+      res.status(201).json(post);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: error.errors[0].message });
+      }
+      res.status(500).json({ error: "Failed to create post" });
     }
   });
 

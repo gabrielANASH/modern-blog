@@ -14,9 +14,9 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/blog", label: "Blog" },
-    { href: "#categories", label: "Categories" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "/write-story", label: "Write Story" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function Navigation() {
             <Link href="/">
               <motion.h1 
                 whileHover={{ scale: 1.05 }}
-                className="text-2xl font-bold font-sans text-dusty-pink cursor-pointer"
+                className="text-2xl font-bold font-sans text-electric-purple cursor-pointer"
                 data-testid="logo"
               >
                 ModernBlog
@@ -59,9 +59,9 @@ export default function Navigation() {
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <motion.span
-                      whileHover={{ color: "#D8A7B1" }}
-                      className={`text-charcoal-gray hover:text-dusty-pink transition-colors duration-300 font-medium cursor-pointer ${
-                        location === item.href ? "text-dusty-pink" : ""
+                      whileHover={{ color: "#7C3AED" }}
+                      className={`text-charcoal-gray hover:text-electric-purple transition-colors duration-300 font-medium cursor-pointer ${
+                        location === item.href ? "text-electric-purple" : ""
                       }`}
                       data-testid={`nav-${item.label.toLowerCase()}`}
                     >
@@ -78,7 +78,7 @@ export default function Navigation() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-charcoal-gray hover:text-dusty-pink transition-colors duration-300"
+                className="p-2 text-charcoal-gray hover:text-electric-purple transition-colors duration-300"
                 data-testid="button-search"
               >
                 <Search className="w-5 h-5" />
@@ -88,7 +88,7 @@ export default function Navigation() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 text-charcoal-gray hover:text-dusty-pink transition-colors duration-300"
+                className="md:hidden p-2 text-charcoal-gray hover:text-electric-purple transition-colors duration-300"
                 data-testid="button-mobile-menu"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -111,9 +111,9 @@ export default function Navigation() {
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <motion.span
-                      whileHover={{ x: 10, color: "#D8A7B1" }}
+                      whileHover={{ x: 10, color: "#7C3AED" }}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-charcoal-gray hover:text-dusty-pink transition-all duration-300 cursor-pointer"
+                      className="block px-3 py-2 text-charcoal-gray hover:text-electric-purple transition-all duration-300 cursor-pointer"
                       data-testid={`mobile-nav-${item.label.toLowerCase()}`}
                     >
                       {item.label}

@@ -12,8 +12,8 @@
   --popover: hsl(0, 0%, 100%);
   --popover-foreground: hsl(0, 0%, 20%);
   
-  /* Primary Palette - Dusty Pink */
-  --primary: hsl(341, 29%, 75%); /* #D8A7B1 */
+  /* Primary Palette - Electric Purple */
+  --primary: hsl(269, 80%, 55%); /* #7C3AED */
   --primary-foreground: hsl(0, 0%, 100%);
   
   /* Secondary - Charcoal */
@@ -24,9 +24,9 @@
   --muted: hsl(0, 0%, 95.7%); /* #F4F4F4 */
   --muted-foreground: hsl(0, 0%, 40%); /* #666666 */
   
-  /* Accent - Light Lavender */
-  --accent: hsl(269, 59%, 89%); /* #C4B7E5 */
-  --accent-foreground: hsl(0, 0%, 20%);
+  /* Accent - Neon Pink */
+  --accent: hsl(325, 85%, 60%); /* #ED39C7 */
+  --accent-foreground: hsl(0, 0%, 100%);
   
   /* Destructive */
   --destructive: hsl(0, 84%, 60%);
@@ -60,13 +60,13 @@
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
   --radius: 1rem;
   
-  /* Custom Blog Color Palette */
-  --dusty-pink: hsl(341, 29%, 75%); /* #D8A7B1 */
-  --light-lavender: hsl(269, 59%, 89%); /* #C4B7E5 */
-  --muted-teal: hsl(180, 40%, 60%); /* #4C9A9A */
+  /* Vibrant & Bold Color Palette */
+  --electric-purple: hsl(269, 80%, 55%); /* #7C3AED */
+  --neon-pink: hsl(325, 85%, 60%); /* #ED39C7 */
+  --bright-orange: hsl(25, 95%, 53%); /* #FF6B35 */
+  --vivid-blue: hsl(217, 91%, 60%); /* #3B82F6 */
+  --lime-green: hsl(84, 85%, 60%); /* #84CC16 */
   --vibrant-coral: hsl(0, 84%, 67%); /* #FF6B6B */
-  --mustard-yellow: hsl(43, 96%, 67%); /* #FFC857 */
-  --electric-blue: hsl(217, 91%, 60%); /* #3B82F6 */
   --charcoal-gray: hsl(0, 0%, 20%); /* #333333 */
   --light-gray: hsl(0, 0%, 40%); /* #666666 */
   --off-white: hsl(0, 0%, 98.4%); /* #F9F9F9 */
@@ -123,28 +123,28 @@
 }
 
 @layer components {
-  .dusty-pink {
-    background-color: var(--dusty-pink);
+  .electric-purple {
+    background-color: var(--electric-purple);
   }
   
-  .light-lavender {
-    background-color: var(--light-lavender);
+  .neon-pink {
+    background-color: var(--neon-pink);
   }
   
-  .muted-teal {
-    background-color: var(--muted-teal);
+  .bright-orange {
+    background-color: var(--bright-orange);
+  }
+  
+  .vivid-blue {
+    background-color: var(--vivid-blue);
+  }
+  
+  .lime-green {
+    background-color: var(--lime-green);
   }
   
   .vibrant-coral {
     background-color: var(--vibrant-coral);
-  }
-  
-  .mustard-yellow {
-    background-color: var(--mustard-yellow);
-  }
-  
-  .electric-blue {
-    background-color: var(--electric-blue);
   }
   
   .charcoal-gray {
@@ -187,13 +187,13 @@
   
   /* Advanced gradient animations */
   .gradient-shift {
-    background: linear-gradient(-45deg, var(--dusty-pink), var(--light-lavender), var(--muted-teal), var(--vibrant-coral));
+    background: linear-gradient(-45deg, var(--electric-purple), var(--neon-pink), var(--bright-orange), var(--vibrant-coral));
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
   }
   
   .text-gradient-animated {
-    background: linear-gradient(-45deg, var(--vibrant-coral), var(--dusty-pink), var(--electric-blue), var(--mustard-yellow));
+    background: linear-gradient(-45deg, var(--vibrant-coral), var(--electric-purple), var(--vivid-blue), var(--bright-orange));
     background-size: 400% 400%;
     animation: gradientShift 6s ease infinite;
   }

@@ -5,7 +5,7 @@ import { slideUpVariants, floatVariants } from "@/lib/animations";
 
 export default function HeroSection() {
   return (
-    <section className="pt-16 bg-gradient-to-br from-light-lavender via-white to-off-white min-h-screen flex items-center">
+    <section className="pt-16 bg-gradient-to-br from-electric-purple/10 via-white to-off-white min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
@@ -17,7 +17,7 @@ export default function HeroSection() {
           >
             <h1 className="text-5xl lg:text-7xl font-bold font-sans text-charcoal leading-tight mb-6">
               Stories That{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-vibrant-coral to-dusty-pink">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-vibrant-coral to-electric-purple">
                 Inspire
               </span>
             </h1>
@@ -29,20 +29,22 @@ export default function HeroSection() {
               <Link href="/blog">
                 <Button
                   size="lg"
-                  className="px-8 py-4 bg-electric-blue text-white rounded-xl font-semibold hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="px-8 py-4 bg-gradient-to-r from-electric-purple to-neon-pink text-white rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   data-testid="button-start-reading"
                 >
                   Start Reading
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-4 border-2 border-charcoal-gray text-charcoal-gray rounded-xl font-semibold hover:bg-charcoal-gray hover:text-white transition-all duration-300"
-                data-testid="button-write-story"
-              >
-                Write a Story
-              </Button>
+              <Link href="/write-story">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4 border-2 border-electric-purple text-electric-purple rounded-xl font-semibold hover:bg-electric-purple hover:text-white transition-all duration-300"
+                  data-testid="button-write-story"
+                >
+                  Write a Story
+                </Button>
+              </Link>
             </div>
           </motion.div>
           

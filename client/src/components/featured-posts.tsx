@@ -101,7 +101,7 @@ export default function FeaturedPosts() {
                     />
                     <CardContent className="p-8">
                       <div className="flex items-center gap-4 mb-4">
-                        <Badge className="bg-vibrant-coral text-white">
+                        <Badge className="bg-bright-orange text-white">
                           {mainPost.category}
                         </Badge>
                         <span className="text-gray-500 text-sm flex items-center gap-1">
@@ -109,7 +109,7 @@ export default function FeaturedPosts() {
                           {mainPost.readTime} min read • {new Date(mainPost.createdAt!).toLocaleDateString()}
                         </span>
                       </div>
-                      <h3 className="text-2xl lg:text-3xl font-bold font-sans text-charcoal-gray mb-4 group-hover:text-dusty-pink transition-colors duration-300">
+                      <h3 className="text-2xl lg:text-3xl font-bold font-sans text-charcoal-gray mb-4 group-hover:text-electric-purple transition-colors duration-300">
                         {mainPost.title}
                       </h3>
                       <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -156,7 +156,7 @@ export default function FeaturedPosts() {
                       />
                       <CardContent className="p-6">
                         <div className="flex items-center gap-2 mb-3">
-                          <Badge className="bg-electric-blue text-white text-sm">
+                          <Badge className="bg-vivid-blue text-white text-sm">
                             {post.category}
                           </Badge>
                           <span className="text-gray-500 text-sm flex items-center gap-1">
@@ -164,7 +164,7 @@ export default function FeaturedPosts() {
                             {post.readTime} min read
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold font-sans text-charcoal-gray mb-3 group-hover:text-dusty-pink transition-colors duration-300">
+                        <h3 className="text-xl font-bold font-sans text-charcoal-gray mb-3 group-hover:text-electric-purple transition-colors duration-300">
                           {post.title}
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">

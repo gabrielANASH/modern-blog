@@ -5,11 +5,10 @@ import { Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 export default function Footer() {
   const quickLinks = [
     { href: "/", label: "Home" },
-    { href: "#about", label: "About" },
+    { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
-    { href: "#categories", label: "Categories" },
-    { href: "#write", label: "Write for Us" },
-    { href: "#contact", label: "Contact" },
+    { href: "/write-story", label: "Write Story" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const categories = [
@@ -50,7 +49,7 @@ export default function Footer() {
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  whileHover={{ scale: 1.1, backgroundColor: "#D8A7B1" }}
+                  whileHover={{ scale: 1.1, backgroundColor: "#7C3AED" }}
                   className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center transition-all duration-300"
                   data-testid={`social-${social.label.toLowerCase()}`}
                 >
@@ -67,13 +66,13 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <motion.a
+                    <motion.span
                       whileHover={{ x: 5, color: "#FFFFFF" }}
                       className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer"
                       data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {link.label}
-                    </motion.a>
+                    </motion.span>
                   </Link>
                 </li>
               ))}
